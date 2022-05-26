@@ -30,7 +30,7 @@ const modals = () => {
     };
 
     const showModalByTimeout = (modalSelector, timeout) => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
                 document.querySelector(modalSelector).style.display = 'block';
             },
             timeout);
@@ -38,8 +38,8 @@ const modals = () => {
 
     bindModal('.popup_engineer_btn', '.popup_engineer', '.popup_engineer .popup_close');
     bindModal('.phone_link', '.popup', '.popup .popup_close');
-
-    showModalByTimeout('.popup_engineer', 30000)
+    //todo: return showModalByTimeout
+    // showModalByTimeout('.popup_engineer', 30000);
 };
 
 export default modals;
